@@ -12,7 +12,7 @@ day = now.day
 hour = now.hour
 minute = now.minute
 
-date = str(day)+'/'+str(month)+'/'+str(year)+' '+str(int(hour)+5)+':'+str(minute)
+date = day+'/'+month+'/'+year+' '+hour+':'+minute
 
 
 def insert(ism, familiya, phone):
