@@ -4,14 +4,11 @@ from datetime import datetime
 
 
 now = datetime.now()
-
-year = now.year
-month = now.month
-day = now.day
-
-hour = now.hour
-minute = now.minute
-
+year = str(now.year)
+month = str(now.month)
+day = str(now.day)
+hour = str(now.hour+5)
+minute = str(now.minute)
 date = day+'/'+month+'/'+year+' '+hour+':'+minute
 
 
