@@ -5,14 +5,14 @@ from datetime import datetime
 
 now = datetime.now()
 
-year = str(now.year)
-month = str(now.month)
-day = str(now.day)
+year = now.year
+month = now.month
+day = now.day
 
-hour = str(now.hour+5)
-minute = str(now.minute)
+hour = now.hour
+minute = now.minute
 
-date = day+'/'+month+'/'+year+' '+hour+':'+minute
+date = str(day)+'/'+str(month)+'/'+str(year)+' '+str(int(hour)+5)+':'+str(minute)
 
 
 def insert(ism, familiya, phone):
