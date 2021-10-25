@@ -3,13 +3,23 @@ from pymongo import MongoClient
 from datetime import datetime
 
 
+now = datetime.now()
+
+year = str(now.year)
+month = str(now.month)
+day = str(now.day)
+
+hour = str(now.hour+5)
+minute = str(now.minute)
+
+date = day+'/'+month+'/'+year+' '+hour+':'+minute
+
+
 def insert(ism, familiya, phone):
    cluster = MongoClient("mongodb+srv://raxmatjon:raxmatjon@cluster0.g3zlm.mongodb.net/RegisterBot?retryWrites=true&w=majority")
    db = cluster['bot']
    collection = db['bot']
-   now = datetime.now()
-   dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-   list = {"ism":ism,"familiya":familiya,"phone":phone, "date":dt_string}
+   list = {"ism":ism,"familiya":familiya,"phone":phone, "date":date}
    collection.insert_one(list)
    
 
