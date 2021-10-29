@@ -20,7 +20,7 @@ def insert(ism, familiya, phone):
    collection.insert_one(list)
    
 
-API_TOKEN = '2070033776:AAEb5lKaBnjENVaqeJsh_4TwH17wNq82cmE'
+API_TOKEN = '2084258651:AAESlcK7I0fct0IaWAEmX0sHIfRI_vXKCD8'
 
 bot = telebot.TeleBot(API_TOKEN)
 
